@@ -28,6 +28,7 @@ requirements:
 test:
   imports:
     - eolearn
+    - eolearn.core
     - eolearn.coregistration
 
 about:
