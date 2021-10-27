@@ -40,6 +40,7 @@ Installing `eo-learn-coregistration` from the `conda-forge` channel can be achie
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `eo-learn-coregistration` can be installed with:
@@ -121,6 +122,7 @@ Feedstock Maintainers
 * [@benhuff](https://github.com/benhuff/)
 * [@dcunn](https://github.com/dcunn/)
 * [@mwilson8](https://github.com/mwilson8/)
+* [@mxr-conda](https://github.com/mxr-conda/)
 * [@oblute](https://github.com/oblute/)
 * [@rluria14](https://github.com/rluria14/)
 
