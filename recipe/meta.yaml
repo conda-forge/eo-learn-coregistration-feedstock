@@ -17,18 +17,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
 
   run:
     - eo-learn-core
     - opencv
-    - python >=3.6
+    - python >=3.7
     - thunder-registration
 
 test:
   imports:
     - eolearn
     - eolearn.core
+    - eolearn.coregistration
 
 about:
   home: https://github.com/sentinel-hub/eo-learn
