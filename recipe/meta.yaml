@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
 
   run:
     - eo-learn-core
     - opencv
-    - python >=3.5
+    - python >=3.6
     - thunder-registration
 
 test:
