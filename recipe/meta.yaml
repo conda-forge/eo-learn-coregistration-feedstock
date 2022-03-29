@@ -1,5 +1,5 @@
 {% set name = "eo-learn-coregistration" %}
-{% set version = "0.10.1" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a1611bd05f9045e1f25ed9e37f522a6e44b66f545708480548e95a39df3ae305
+  sha256: 8ab46e4f76ab783007661a771a2faa8a2810584e919293584cd04c2e489b03dc
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,15 +20,17 @@ requirements:
     - python >=3.7
 
   run:
-    - eo-learn-core
+    - eo-learn-core >=1.0.0
     - opencv
     - python >=3.7
     - thunder-registration
 
 test:
+  requires:
+    - python <=3.9
   imports:
     - eolearn
-    - eolearn.core
+    - eolearn.coregistration
 
 about:
   home: https://github.com/sentinel-hub/eo-learn
