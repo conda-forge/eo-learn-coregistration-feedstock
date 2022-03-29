@@ -1,5 +1,5 @@
 {% set name = "eo-learn-coregistration" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8988c195b1944f27c5cad6c335d794d5f9b4c3ee51fbd347c553e0b5110159c9
+  sha256: 8ab46e4f76ab783007661a771a2faa8a2810584e919293584cd04c2e489b03dc
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
 test:
   imports:
     - eolearn
-    - eolearn.core
+    - eolearn.coregistration
 
 about:
   home: https://github.com/sentinel-hub/eo-learn
