@@ -26,6 +26,8 @@ requirements:
     - thunder-registration
 
 test:
+  requires:
+    - python <=3.9
   imports:
     - eolearn
     - eolearn.coregistration
