@@ -1,5 +1,5 @@
 {% set name = "eo-learn-coregistration" %}
-{% set version = "1.4.2" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b4743916d90daf44ccac83c30f807d965be68e1758126f8ba2047f5e8d4eac19
+  sha256: 9987a081303efe97be13d2814f146d56abf82cce9c58b5561a3223cc8bfbbd1f
 
 build:
   noarch: python
