@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b4743916d90daf44ccac83c30f807d965be68e1758126f8ba2047f5e8d4eac19
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
 
   run:
     - eo-learn-core
     - opencv
-    - python >=3.7
+    - python >={{ python_min }}
     - thunder-registration
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - eolearn
     - eolearn.core
